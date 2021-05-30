@@ -66,7 +66,9 @@ submitBtnEl.addEventListener("click", (e) => {
         deselectAnswers();
         loadQuiz();
     } else {
-        document.getElementById("quiz").innerHTML = `<h1>Your score is <strong> ${score}</strong> out of ${quizData.length}</h1><button onClick="location.reload()">Reload</button>`;
+        const quizEl = document.getElementById("quiz");
+        quizEl.innerHTML = `<h1>Your score is <strong> ${score}</strong> out of ${quizData.length}</h1><button onClick="location.reload()">Reload</button>`;
+        quizEl.style.padding = "1rem"
     }
 
 })
